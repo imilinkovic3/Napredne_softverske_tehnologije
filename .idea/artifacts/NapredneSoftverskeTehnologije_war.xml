@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NapredneSoftverskeTehnologije:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="nst.war">
+      <element id="artifact" artifact-name="NapredneSoftverskeTehnologije:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NST:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="nst.war">
+      <element id="artifact" artifact-name="NST:war exploded" />
+    </root>
+  </artifact>
+</component>

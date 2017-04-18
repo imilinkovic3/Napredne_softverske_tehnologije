@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="base-definition" template="/WEB-INF/views/tiles/layouts/defaultLayaout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/templates/defaultHeader.jsp"/>
+        <put-attribute name="menu" value=""/>
+        <put-attribute name="body" value=""/>
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/templates/defaultFooter.jsp"/>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/static/css/template.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="usercreation" extends="base-definition">
+        <put-attribute name="title" value="Employees"/>
+        <put-attribute name="body" value="/WEB-INF/views/users/usercreation.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuAdmin.jsp"/>
+    </definition>
+
+    <definition name="details" extends="base-definition">
+        <put-attribute name="title" value="Details"/>
+        <put-attribute name="body" value="/WEB-INF/views/users/details.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuAdmin.jsp"/>
+    </definition>
+
+    <definition name="adduser" extends="base-definition">
+        <put-attribute name="title" value="Details"/>
+        <put-attribute name="body" value="/WEB-INF/views/users/adduser.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuAdmin.jsp"/>
+    </definition>
+
+    <definition name="company" extends="base-definition">
+        <put-attribute name="title" value="Company"/>
+        <put-attribute name="body" value="/WEB-INF/views/company/company.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuAdmin.jsp"/>
+    </definition>
+
+    <definition name="homeAdmin" extends="base-definition">
+        <put-attribute name="title" value="Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/home/home.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuAdmin.jsp"/>
+    </definition>
+
+    <definition name="homeBusiness" extends="base-definition">
+        <put-attribute name="title" value="Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/home/home.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+    <definition name="homeUser" extends="base-definition">
+        <put-attribute name="title" value="Home"/>
+        <put-attribute name="body" value="/WEB-INF/views/home/home.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+    <definition name="notAdminDetails" extends="base-definition">
+        <put-attribute name="title" value="Details"/>
+        <put-attribute name="body" value="/WEB-INF/views/users/adduser.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+    <definition name="documentForm" extends="base-definition">
+        <put-attribute name="title" value="Documents"/>
+        <put-attribute name="body" value="/WEB-INF/views/document/documentForm.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+    <definition name="documents" extends="base-definition">
+        <put-attribute name="title" value="Documents"/>
+        <put-attribute name="body" value="/WEB-INF/views/document/documents.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+    <definition name="process" extends="base-definition">
+        <put-attribute name="title" value="Process"/>
+        <put-attribute name="body" value="/WEB-INF/views/process/processes.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/menuBusiness.jsp"/>
+    </definition>
+
+</tiles-definitions>
