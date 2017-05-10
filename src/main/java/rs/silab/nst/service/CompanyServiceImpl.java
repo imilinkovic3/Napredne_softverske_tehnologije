@@ -12,7 +12,7 @@ import rs.silab.nst.model.Company;
 
 @Service("companyService")
 @Transactional
-public class CompanyServiceImpl implements CompanyService{
+public class CompanyServiceImpl implements CompanyService {
 
     @Autowired
     private CompanyDao companyDao;

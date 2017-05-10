@@ -18,6 +18,12 @@ public class Role implements Serializable {
     public Role() {
     }
 
+    public Role(int id, String name, String title) {
+        this.id = id;
+        this.name = name;
+        this.title = title;
+    }
+
     public int getId() {
         return this.id;
     }
@@ -46,4 +52,15 @@ public class Role implements Serializable {
     public String toString() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Role) {
+            Role role = (Role) obj;
+            if (role.getId() == this.getId()) {
+                return true;
+            }
+        }
+
+        return false;    }
 }

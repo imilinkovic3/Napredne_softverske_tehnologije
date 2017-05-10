@@ -47,6 +47,15 @@ public class Process implements Serializable {
         nodes = new ArrayList();
     }
 
+    public Process(int id, Company company, String description, String name, String text, Process process) {
+        this.id = id;
+        this.company = company;
+        this.description = description;
+        this.name = name;
+        this.text = text;
+        this.process = process;
+    }
+
     public int getId() {
         return this.id;
     }
@@ -140,4 +149,15 @@ public class Process implements Serializable {
                 ", nodes=" + nodes +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Process) {
+            Process process = (Process) obj;
+            if (process.getId() == this.getId()) {
+                return true;
+            }
+        }
+
+        return false;    }
 }

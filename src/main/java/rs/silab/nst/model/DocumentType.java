@@ -32,6 +32,7 @@ public class DocumentType implements Serializable {
         status = Status.NOT_INSTANTIATED;
     }
 
+
     public Company getCompany() {
         return company;
     }

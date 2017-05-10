@@ -45,6 +45,19 @@ public class User implements Serializable {
         stringRoles = new ArrayList<>();
     }
 
+    public User(int id,String email, String firstname, String lastname, String password, String confirmPassword, String username, Company companyBean, List<Role> roles, List<String> stringRoles) {
+        this.id = id;
+        this.email = email;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+        this.username = username;
+        this.companyBean = companyBean;
+        this.roles = roles;
+        this.stringRoles = stringRoles;
+    }
+
     public List<String> getStringRoles() {
         if (roles != null) {
             for (Role role : roles) {
@@ -155,5 +168,9 @@ public class User implements Serializable {
         }
 
         return false;
+    }
+
+    public void addRole(Role role){
+        this.roles.add(role);
     }
 }
